@@ -25,24 +25,19 @@ let puntigiocatore = 0;
 
 console.log(Math.floor(Math.random() * 6) + 1)
 
-for (let i = 1; i < 2; i++) {
+for (let i = 0; i < 1; i++) {
   const computer = (Math.floor(Math.random() * 6) + 1);
-  const giocatore = parseInt(prompt('Metti un numero'))
-
-  numbericomputer.push(computer);
-  numberigiocare.push(giocatore);
-
+  const giocatore = (Math.floor(Math.random() * 6) + 1);
   if (computer > giocatore) {
+    console.log('Vince computer');
     punticomputer++;
   }
   else if (computer < giocatore) {
+    console.log('Vince giocatore')
     puntigiocatore++;
+  }
+  else {
+    console.log('Pareggio')
   }
 }
 
-if (punticomputer > puntigiocatore) {
-  console.log('pc numeri ${computer}. giocatore numeri ${giocatore}. Vince computer')
-}
-else if (punticomputer < puntigiocatore) {
-  console.log('pc numeri ${computer}. giocatore numeri ${giocatore}. Vince giocatore')
-}
